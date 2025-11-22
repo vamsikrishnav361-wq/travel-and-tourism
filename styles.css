@@ -1,0 +1,99 @@
+/* Main project stylesheet.
+   This file imports existing travel.css for the base look.
+*/
+@import url('travel.css');
+
+/* Additional overrides */
+.logo{font-size:2.2rem}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif}
+.hero{padding:28px 0}
+.header-actions .user-badge{margin-right:8px;font-weight:600}
+.logout-btn{margin-left:8px}
+.container{max-width:1000px;margin:0 auto;padding:16px}
+
+/* Header light blue background */
+.site-header{background:#e3f2fd;border-bottom:2px solid #0b7edb}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;text-align:left}
+.site-header .logo{margin:0;flex-shrink:0}
+.site-header .nav{flex:1;display:flex;justify-content:center}
+.site-header .header-actions{flex-shrink:0}
+
+/* Navigation links dark blue with zoom effect */
+.nav a{color:#003d99;font-weight:600;text-decoration:none;margin:0 12px;transition:all 0.3s ease;background:#87CEEB;padding:8px 12px;border-radius:6px}
+.nav a:hover, .nav a:active{color:#003d99;text-decoration:underline;transform:scale(1.15);text-shadow:0 0 8px rgba(11,126,219,0.4);background:#87CEEB}
+
+/* New hero box styles with dark blue circle */
+.hero-hero{display:flex;align-items:center;justify-content:center;min-height:240px;background:#003d99;color:#fff;margin:0 -16px;text-align:center}
+.hero-box{background:rgba(255,255,255,0.06);padding:36px 28px;border-radius:50%;width:280px;height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(11,126,219,0.12)}
+.hero-title{font-size:48px;line-height:1;margin:0 0 8px;font-weight:800;letter-spacing:0.5px;text-align:center}
+.hero-sub{margin:0 0 14px;opacity:0.95;text-align:center}
+.hero-box .btn{margin:6px}
+
+/* Center text for sections and headings */
+main h2{text-align:center}
+.section{text-align:center}
+.grid{justify-items:center}
+.container{text-align:center}
+footer{text-align:center}
+
+/* Featured Destinations - left aligned */
+.section:nth-of-type(2) h2{text-align:left}
+.section:nth-of-type(2){text-align:left}
+.section:nth-of-type(2) .grid{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-start}
+
+/* All destination cards - uniform sizing */
+.section:nth-of-type(2) .card{max-width:150px;padding:8px;text-align:left}
+.section:nth-of-type(2) .card img{width:100%;height:160px;object-fit:cover;display:block}
+
+@media (max-width:480px){
+   .hero-title{font-size:36px}
+}
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.grid article {
+  width: 30%;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* Image zoom overlay */
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+.zoom-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* When active */
+.zoom-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}

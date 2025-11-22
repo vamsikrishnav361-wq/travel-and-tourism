@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Book a Package — Explore with RVS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Explore</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+      <div class="header-actions">
+        <button class="login-btn" id="openLogin">Login</button>
+      </div>
+    </div>
+  </header>
+
+ 
+
+  <main class="container">
+    <h2>Book a Package</h2>
+    <form id="bookingForm" style="max-width:640px">
+      <label>Package<select name="package" id="packageSelect" required>
+        <option value="">-- Select a package --</option>
+        <option value="pkg_himalaya_trek" data-price="12999">Himalayan Trekking Adventure - ₹12999</option>
+        <option value="pkg_manali_adventure" data-price="11999">Manali Mountain Escape - ₹11999</option>
+        <option value="pkg_goa_beach" data-price="13999">Goa Beach Relaxation - ₹13999</option>
+        <option value="pkg_kerala_backwaters" data-price="5999">Kerala Backwaters Tour - ₹5999</option>
+        <option value="pkg_rajasthan_culture" data-price="3999">Rajasthan Cultural Tour - ₹3999</option>
+        <option value="pkg_shimla_honeymoon" data-price="10999">Shimla Honeymoon Package - ₹10999</option>
+      </select></label><br>
+      <br>
+      <label>Full Name<input name="name" required></label><br>
+      <br>
+      <label>Email<input name="email" type="email" required></label><br>
+      <br>
+      <label>Phone<input name="phone" type="tel" required></label><br>
+      <br>
+      <label>Number of Guests<input type="number" name="guests" value="1" min="1" max="10" required></label><br>
+      <br>
+      <label>Preferred Travel Date<input name="date" type="date" required></label><br>
+      
+      <p>Base Price: <strong id="basePrice">₹0</strong></p>
+      <p>Total Booking Price: <strong class="price" id="totalPrice">₹0.00</strong></p>
+      <button class="btn" type="submit">Confirm Booking</button>
+    </form>
+    <p class="muted">Bookings are stored locally for demo purposes. Your booking reference will be generated after confirmation.</p>
+  </main>
+
+  <footer class="site-footer"><div class="container">&copy; 2025 Explore</div></footer>
+  <script src="scripts.js"></script>
+  
+
+</body>
+</html>
